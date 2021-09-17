@@ -299,7 +299,8 @@ footer {
 
 .redes-top {
   height: 40px;
-  background-color: #004269;
+  background-color: #f3d602;
+  /* #004269; */
   align-content: center;
   padding-right: 60px;
 }
@@ -307,18 +308,32 @@ footer {
 .iconos {
   padding: 0px 15px;
   font-size: large;
-  color: white;
+  color: #000000;
+}
+
+.iconos:hover {
+  padding: 0px 15px;
+  font-size: large;
+  color: #ffffff;
+}
+
+.iconos-producto {
+  padding: 20px 15px;
+  padding-bottom: 7px;
+  font-size: 30px;
+  color: #f3d602;
+
 }
 
 .letra-nav {
   font-size: 15px;
-  color: #737373;
+  color: #000000;
   font-weight: 700;
 }
 
 .letra-nav:hover {
   font-size: 15px;
-  color: #f39c12;
+  color: #f3d602;
   font-weight: 700;
 }
 
@@ -333,11 +348,67 @@ footer {
   margin-top: 15px;
   margin-bottom: 20px;
   border: 0;
-  border-top: 4px solid #004269;
+  border-top: 4px solid #f3d602;
   width: 85%;
 }
 
+#redes-ico {
+  font-weight: 700;
+  font-size: large;
+  color: black;
+}
 
+#redes-ico:hover {
+  font-weight: 700;
+  font-size: large;
+  color: white;
+}
+
+.nav-pills li a {
+  display: block;
+    width: 180px;
+    height: 130px;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-family: 'Poppins',sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    color: #373f50;
+    padding-bottom: 10px;
+    position: relative;
+    padding-top: 0px;
+    border: 1px solid #ededed;
+    border-radius: 15px !important;
+    line-height: 1.2;
+}
+
+.nav-pills li a:hover {
+  display: block;
+    width: 180px;
+    height: 130px;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-family: 'Poppins',sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    color: #ffffff;
+    background-color: #000000;
+    padding-bottom: 10px;
+    position: relative;
+    padding-top: 0px;
+    border: 1px solid #ededed;
+    border-radius: 15px !important;
+    line-height: 1.2;
+}
+
+.default-service-column .inner-box {
+  position: relative;
+  border: 1px solid #e0e0e0;
+  max-width: 420px;
+  height: 400px;
+  width: 200px;
+  margin: 0 auto;
+  }
 
 @media screen and (min-width: 1600px) {
   .container {

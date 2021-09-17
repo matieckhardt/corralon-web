@@ -33,14 +33,14 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
 </head>
-
+<!-- id="redes-ico" -->
 <body>
     <div class="container-fluid">
         <div class="row redes-top justify-content-end ">
             <!-- <a class="iconos" href="" > corralonbianchi@gmail.com</a> -->
-            <a class="iconos d-none d-sm-block" href="https://www.instagram.com/" ><i class="fab fa-instagram"></i></a>
-            <a class="iconos d-none d-sm-block" href="https://es-la.facebook.com/"><i class="fab fa-facebook"></i></i></a>
-            <a class="iconos" href="https://web.whatsapp.com/"><i class="fab fa-whatsapp"></i></a>
+            <a class="iconos d-none d-sm-block" href="https://www.instagram.com/" ><i class="fab fa-instagram" id="redes-ico"></i></a>
+            <a class="iconos d-none d-sm-block" href="https://es-la.facebook.com/"><i class="fab fa-facebook" id="redes-ico"></i></i></a>
+            <a class="iconos" href="https://web.whatsapp.com/"><i class="fab fa-whatsapp" id="redes-ico"></i></a>
             <a class="iconos" href="https://www.google.com/"><i class="fas fa-map-marker-alt"></i></a>
             <a class="iconos" href="https://www.google.com/"><i class="fas fa-shopping-cart"></i></a>
         </div>
@@ -211,20 +211,182 @@
 
                 <section class="container my-5">
                     <!-- SECCION PRODUCTOS -->
+                    <!-- TITULO CON PALABRA "PRODUCTOS" -->
                     <div class="row justify-content-center">
                         <div class="wow animate__fadeInLeft animate__delay-2s">
                             <h3 class=""> PRODUCTOS </h3>
                             <hr class="subrayado">
                         </div>
                     </div>
+                    <!-- 3 BOTONES PARA ELEGIR CATEGORIAS DE PRODUCTOS -->
                     <div class="row justify-content-center">
                         <ul class="nav nav-pills nav-fill mb-3" id="pills-tab" role="tablist">
+                          <!-- 1 -->
                             <li class="nav-item">
-                                 <a class="nav-link" id="grueso-tab" data-toggle="pill" href="#grueso" role="tab" aria-controls="grueso" aria-selected="true">
-                                     <div class="grueso mx-auto"></div>
-                                      Grueso<br>&nbsp; </a>
-                             </li>
-                                    <li class="nav-item"> <a class="nav-link" id="fino-tab" data-toggle="pill" href="#fino" role="tab" aria-controls="fino" aria-selected="false"><div class="fino mx-auto"></div> Fino<br>&nbsp; </a></li><li class="nav-item"> <a class="nav-link" id="seco-tab" data-toggle="pill" href="#seco" role="tab" aria-controls="seco" aria-selected="false"><div class="seco mx-auto"></div> Construcción en seco </a></li></ul></div>
+                            <a 
+                            class="nav-link" 
+                            id="grueso-tab" 
+                            data-toggle="pill" 
+                            href="#grueso" 
+                            role="tab" 
+                            aria-controls="grueso" 
+                            aria-selected="true">
+                              <div class="iconos-producto">
+                                  <i class="fas fa-hard-hat"></i></div> 
+                                  Grueso<br/>
+                            </a>
+                          </li>
+                          <!-- 2 -->
+                          <li class="nav-item">
+                            <a
+                              class="nav-link"
+                              id="fino-tab"
+                              data-toggle="pill"
+                              href="#fino"
+                              role="tab"
+                              aria-controls="fino"
+                              aria-selected="false"
+                              ><div class="iconos-producto"><i class="fas fa-tools"></i></div>
+                              Fino<br />
+                            </a>
+                          </li>
+                          <!-- 3 -->
+                          <li class="nav-item">
+                            <a
+                              class="nav-link"
+                              id="seco-tab"
+                              data-toggle="pill"
+                              href="#seco"
+                              role="tab"
+                              aria-controls="seco"
+                              aria-selected="false"
+                              ><div class="iconos-producto"><i class="fas fa-hammer"></i></div>
+                              Construcción en seco
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                      <!-- CAJAS CON PRODUCTOS -->
+                      <div class="container">
+                        <div class="card-deck my-3">
+                          <div class="card">
+                            <img
+                              class="card-img-top"
+                              src="https://placekitten.com/300/300"
+                              alt="Card image cap"
+                            />
+                            <div class="card-body text-center">
+                              <h5>Card title</h5>
+                            </div>
+                            <div class="text-right">
+                              <a href="#">+ info ></a>
+                            </div>
+                          </div>
+                      
+                          <div class="card">
+                            <img
+                              class="card-img-top"
+                              src="https://placekitten.com/300/300"
+                              alt="Card image cap"
+                            />
+                            <div class="card-body text-center">
+                              <h5>Card title</h5>
+                            </div>
+                            <div class="text-right">
+                              <a href="#">+ info ></a>
+                            </div>
+                          </div>
+                      
+                          <div class="card">
+                            <img
+                              class="card-img-top"
+                              src="https://placekitten.com/300/300"
+                              alt="Card image cap"
+                            />
+                            <div class="card-body text-center">
+                              <h5>Card title</h5>
+                            </div>
+                            <div class="text-right">
+                              <a href="#">+ info ></a>
+                            </div>
+                          </div>
+                      
+                          <div class="card">
+                            <img
+                              class="card-img-top"
+                              src="https://placekitten.com/300/300"
+                              alt="Card image cap"
+                            />
+                            <div class="card-body text-center">
+                              <h5>Card title</h5>
+                            </div>
+                            <div class="text-right">
+                              <a href="#">+ info ></a>
+                            </div>
+                          </div>
+                        </div>
+                      
+                        <div class="card-deck my-3">
+                          <div class="card">
+                            <img
+                              class="card-img-top"
+                              src="https://placekitten.com/300/300"
+                              alt="Card image cap"
+                            />
+                            <div class="card-body text-center">
+                              <h5>Card title</h5>
+                            </div>
+                            <div class="text-right">
+                              <a href="#">+ info ></a>
+                            </div>
+                          </div>
+                      
+                          <div class="card">
+                            <img
+                              class="card-img-top"
+                              src="https://placekitten.com/300/300"
+                              alt="Card image cap"
+                            />
+                            <div class="card-body text-center">
+                              <h5>Card title</h5>
+                            </div>
+                            <div class="text-right">
+                              <a href="#">+ info ></a>
+                            </div>
+                          </div>
+                      
+                          <div class="card">
+                            <img
+                              class="card-img-top"
+                              src="https://placekitten.com/300/300"
+                              alt="Card image cap"
+                            />
+                            <div class="card-body text-center">
+                              <h5>Card title</h5>
+                            </div>
+                            <div class="text-right">
+                              <a href="#">+ info ></a>
+                            </div>
+                          </div>
+                      
+                          <div class="card">
+                            <img
+                              class="card-img-top"
+                              src="https://placekitten.com/300/300"
+                              alt="Card image cap"
+                            />
+                            <div class="card-body text-center">
+                              <h5>Card title</h5>
+                            </div>
+                            <div class="text-right">
+                              <a href="#">+ info ></a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                                
+                            
+
                     <div class="row">
                         <div class="col-md-7 wow animate__fadeInLeft animate__delay-2s">
                             <h5 class="subtitle">Bienvenidos</h5>
