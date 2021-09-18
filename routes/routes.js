@@ -2,7 +2,10 @@
 const { Router } = require("express");
 const nodemailer = require("nodemailer");
 const path = require("path");
-const carousel = require("../models/images");
+const Categoria = require("../models/Categorias");
+const Productos = require("../models/Productos");
+const Carousel = require("../models/Carousel");
+const Form = require("../models/Form");
 
 const router = Router();
 
@@ -38,31 +41,111 @@ router.get("/img/carousel", function (req, res) {
   res.sendFile(ruta + "/jsons/car.json");
 });
 
+
 // Filtros Categorias
 
-router.get("/OperacionCategorias/ObtenerCategorias", function (req, res) {
-  res.sendFile(ruta + "/jsons/categories.json");
+router.get("/OperacionCategorias/ObtenerCategorias", async function (req, res) {
+  const data = await Categoria.find();
+  res.json(data);
 });
-router.get("/OperacionCategorias/ObtenerCategoria", function (req, res) {
-  res.sendFile(ruta + "/jsons/productos.json");
+
+router.post("/OperacionCategorias/ObtenerCategoria", async function (req, res) {
+  const data = await Categoria.find({ CategoriaId: req.body.id });
+  res.json(data[0]);
 });
-router.get("/OperacionCategorias/ObtenerItemsCategoria", function (req, res) {
-  res.sendFile(ruta + "/jsons/productos.json");
+
+router.post(
+  "/OperacionCategorias/ObtenerItemsCategoria",
+  async function (req, res) {
+    let data = await Productos.find({ CategoriaId: req.body.id });
+    res.json(data);
+  }
+);
+router.get(
+  "/ObtenerImagenesCarrousel",
+  async function (req, res) {
+    let data = await Carousel.find();
+    res.json(data);
+  }
+);
+
+// Get all posts
+router.get("/posts", async (req, res) => {
+  const posts = await Carousel.find();
+  res.send(posts);
 });
-router.get("/OperacionCategorias/AgregarItemNuevo", function (req, res) {
-  res.sendFile(ruta + "/jsons/productos.json");
+
+router.post("/postCar", async (req, res) => {
+  const datos = [
+    {
+      CarouselLanding: 1,
+      HomeId: "carousel-landing",
+      HomeData: "./img/carousel/img-1.jpg",
+    },
+    {
+      CarouselLanding: 2,
+      HomeId: "carousel-landing",
+      HomeData: "./img/carousel/img-2.jpg",
+    },
+    {
+      CarouselLanding: 3,
+      HomeId: "carousel-landing",
+      HomeData: "./img/carousel/img-3.jpg",
+    },
+    {
+      CarouselLanding: 4,
+      HomeId: "carousel-landing",
+      HomeData: "./img/carousel/img-4.jpg",
+    },
+  ];
+  try {
+    datos.forEach(async (dato) => {
+      const carrusel = new Carousel(dato);
+      await carrusel.save();
+    });
+    res.status(201).json("ok");
+  } catch (error) {
+    res.status(500).send("There was a problem");
+  }
 });
-router.get("/OperacionCategorias/AgregarImagenesItemNuevo", function (req, res) {
-  res.sendFile(ruta + "/jsons/productos.json");
-});
-router.get("/OperacionCategorias/EliminarItem", function (req, res) {
-  res.sendFile(ruta + "/jsons/productos.json");
-});
-router.get("/OperacionCategorias/ObtenerItem", function (req, res) {
-  res.sendFile(ruta + "/jsons/productos.json");
-});
-router.get("/OperacionCategorias/ModificarItem", function (req, res) {
-  res.sendFile(ruta + "/jsons/productos.json");
+
+router.post("/postearDatos", async (req, res) => {
+  const datos = [
+    {
+      "CategoriaId": 1,
+      "CategoriaName": "Bolsas"
+    },
+    {
+      "CategoriaId": 2,
+      "CategoriaName": "Pegamentos"
+    },
+    {
+      "CategoriaId": 3,
+      "CategoriaName": "Ladrillos"
+    },
+    {
+      "CategoriaId": 4,
+      "CategoriaName": "Aridos"
+    },
+    {
+      "CategoriaId": 5,
+      "CategoriaName": "Caños"
+    },
+    {
+      "CategoriaId": 6,
+      "CategoriaName": "Construcción"
+    }
+  ];
+  try {
+    datos.forEach(async (dato) => {
+      const categorias = new Categoria(dato);
+      console.log(categorias);
+      await categorias.save();
+    });
+    res.status(201).json("ok");
+  } catch (error) {
+    res.status(500).send("There was a problem registering the client");
+  }
 });
 
 
@@ -74,17 +157,9 @@ router.get("/posts", async (req, res) => {
         carouselLanding: 0,
         HomeId: "string",
         HomeData: "string",
-      },)
+      })
 
 	res.send(posts)
-})
-
-module.exports = router
-
-// POST 
-
-router.post("/", (req, res) => {
-  res.json(req.body);
 });
 
 module.exports = router;

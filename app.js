@@ -5,6 +5,7 @@ const express = require("express");
 const CORS = require("cors");
 const app = express();
 const path = require("path");
+const morgan =require('morgan');
 
 // Settings
 app.use(
@@ -25,6 +26,7 @@ app.use(express.static(path.join(__dirname, "public/slick")));
 app.use(CORS());
 console.log(CORS())
 
+app.use(morgan('dev'));
 
 // Routes
 app.use(require("./routes/routes"));
