@@ -93,7 +93,12 @@ hr {
   overflow: visible
 }
 
-h1,
+h1{
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-size: 300;
+}
+
 h2,
 h3,
 h4,
@@ -5620,7 +5625,8 @@ input[type="button"].btn-block {
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
   min-height: 1px;
-  padding: 1.25rem
+  padding-top :10px;
+  border-top: 3px solid black;
 }
 
 .card-title {
@@ -5701,7 +5707,8 @@ input[type="button"].btn-block {
 .card-img,
 .card-img-top {
   border-top-left-radius: calc(0.25rem - 1px);
-  border-top-right-radius: calc(0.25rem - 1px)
+  border-top-right-radius: calc(0.25rem - 1px);
+  border-radius: 15px 15px 0px 0px;
 }
 
 .card-img,
@@ -5733,7 +5740,8 @@ input[type="button"].btn-block {
     flex: 1 0 0%;
     margin-right: 15px;
     margin-bottom: 0;
-    margin-left: 15px
+    margin-left: 15px;
+    border-radius: 15px;
   }
 }
 

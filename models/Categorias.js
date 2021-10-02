@@ -4,6 +4,13 @@ const categoriasSchema = new Schema(
   {
     CategoriaId: String,
     CategoriaName: String,
+    SubCategorias: [
+      {
+        SubCategoriaId: Number,
+        SubCategoriaName: String,
+        SubCategoriaImg: String,
+      },
+    ],
   },
   {
     timestamps: true,

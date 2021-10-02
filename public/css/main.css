@@ -53,7 +53,7 @@ main {
 }
 
 .mini-logo {
-  max-height: 300px;
+  max-height: 120px;
   object-fit: cover;
 }
 
@@ -115,6 +115,31 @@ footer {
   height: 100vh;
   width: 100%;
   object-fit: cover;
+  z-index: 100;
+}
+.carousel-title {
+  position: absolute;
+  z-index: 999;
+  top: 120px;
+  right: 0px;
+  left: 0px;
+  bottom: 215px;
+  padding-top: 50px;
+  text-align: center;
+  font-size: 85px;
+  background-color: #222121b2;
+  color: white;
+}
+.carousel-subtitle {
+  position: absolute;
+  z-index: 999;
+  padding-top: 50px;
+  top: 220px;
+  right: 0px;
+  left: 0px;
+  bottom: 0px;
+  text-align: center;
+  font-size: 45px;
 }
 
 #preview {
@@ -345,6 +370,14 @@ footer {
   font-weight: 700;
 }
 
+.subrayado2 {
+  margin-top: 10px;
+  margin-bottom: 12px;
+  border: 0;
+  border-top: 3px solid #f3d602;
+  width: 30%;
+}
+
 .subrayado {
   margin-top: 15px;
   margin-bottom: 20px;
@@ -436,7 +469,7 @@ footer {
 }
 
 .texto-a {
-  color: rgb(0, 0, 0);
+  color: black;
   font-weight: 300;
 }
 
@@ -445,6 +478,53 @@ footer {
   font-weight: 300;
 }
 
+.caja {
+  background-color: #f5f5f5;
+ 
+}
+
+.caja:hover {
+  
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+}
+
+.info {
+  color: #212529;
+  padding-bottom: 12px;
+  font-size: 17px;
+  font-weight: 700;
+}
+.partners{
+  min-height: 150px ;
+    height: 200px;
+    margin-top: 30%;
+
+}
+.form {
+  background-color: rgb(255 255 255);
+  padding-top: 32px;
+  margin-left: 98px;
+  padding-left: 35px;
+  padding-right: 33px;
+  padding-bottom: 20px;
+  text-align: left;
+  border-color: black;
+  border-radius: 9px;
+  z-index: 999;
+}
+.form-img {
+  padding-top: 132px;
+  padding-right: 60px;
+  margin-left: -336px;
+  width: 950px;
+  z-index: -50;
+}
+.contact {
+  background-color: rgb(73, 73, 73);
+  padding-top: 50px;
+  text-align: center;
+  text-transform: uppercase;
+}
 
 
 @media screen and (min-width: 1600px) {
@@ -461,7 +541,7 @@ footer {
 
 @media screen and (max-width: 1366px) {
   .brand-logo {
-    max-height: 200px;
+    max-height: 80px;
   }
 
   span,

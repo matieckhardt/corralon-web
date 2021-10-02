@@ -1,11 +1,12 @@
+const express = require("express");
+const morgan = require("morgan");
 require("dotenv").config();
 require("./database");
 const config = require("./config");
-const express = require("express");
+const exphbs = require("express-handlebars");
 const CORS = require("cors");
 const app = express();
 const path = require("path");
-const morgan =require('morgan');
 
 // Settings
 app.use(
@@ -21,10 +22,20 @@ app.use(express.static(path.join(__dirname, "public/Content")));
 app.use(express.static(path.join(__dirname, "public/fonts")));
 app.use(express.static(path.join(__dirname, "public/img")));
 app.use(express.static(path.join(__dirname, "public/img/carousel")));
-app.use(express.static(path.join(__dirname, "public/scripts")));
+app.use(express.static(path.join(__dirname, "public/js")));
 app.use(express.static(path.join(__dirname, "public/slick")));
 app.use(CORS());
 console.log(CORS())
+app.engine(
+  ".hbs",
+  exphbs({
+    layoutsDir: path.join(app.get("views"), "layouts"),
+    partials: path.join(app.get("views"), "partials"),
+    extname: ".hbs",
+    defaultLayout: "main",
+  })
+);
+app.set("view engine", ".hbs");
 
 app.use(morgan('dev'));
 

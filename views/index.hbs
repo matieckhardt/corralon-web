@@ -1,0 +1,208 @@
+<main class="col bg-white">
+  <section id="carousel-landing">
+    {{#each Slides}}
+    <div>
+      <div class="carousel-text text-white">
+        <h1 class="carousel-title">CORRALON BIANCHI</h1>
+        <p class="carousel-subtitle">La mejor calidad con un servicio de confianza</p>
+      </div>
+      <div style="width: 100%; display: inline-block;" class="slide"><img src="{{slideUrl}}" loading="lazy ">
+      </div>
+    </div>
+    {{/each}}
+  </section>
+  <section class="container my-5">
+    <!-- SECCION PRODUCTOS -->
+    <!-- TITULO CON PALABRA "PRODUCTOS" -->
+    <div class="row justify-content-center" id="productos">
+      <div class="wow animate__fadeInLeft animate__delay-2s">
+        <h3 class=""> PRODUCTOS </h3>
+        <hr class="subrayado">
+      </div>
+    </div>
+    <!-- 3 BOTONES PARA ELEGIR CATEGORIAS DE PRODUCTOS -->
+    <div class="row justify-content-center">
+      <ul class="nav nav-pills nav-fill mb-3" id="pills-tab" role="tablist">
+        <!-- 1 -->
+        <li class="nav-item">
+          <a class="nav-link" id="grueso-tab" data-toggle="pill" href="#grueso" role="tab" aria-controls="grueso"
+            aria-selected="true">
+            <div class="iconos-producto">
+              <i class="fas fa-hard-hat"></i>
+            </div>
+            Grueso<br />
+          </a>
+        </li>
+        <!-- 2 -->
+        <li class="nav-item">
+          <a class="nav-link" id="fino-tab" data-toggle="pill" href="#fino" role="tab" aria-controls="fino"
+            aria-selected="false">
+            <div class="iconos-producto"><i class="fas fa-tools"></i></div>
+            Fino<br />
+          </a>
+        </li>
+        <!-- 3 -->
+        <li class="nav-item">
+          <a class="nav-link" id="seco-tab" data-toggle="pill" href="#seco" role="tab" aria-controls="seco"
+            aria-selected="false">
+            <div class="iconos-producto"><i class="fas fa-hammer"></i></div>
+            Construcción en seco
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- CAJAS CON PRODUCTOS -->
+    <div class="container">
+      <div class="card-deck my-3">
+        <!-- CAJA 1 -->
+        <div class="card caja">
+          <img loading="lazy" class="card-img-top" src="img/home/prod-1.jpg" alt="Card image cap" />
+          <div class="card-body text-center">
+            <h5><span>Hierros</span></h5>
+            <hr class="subrayado2">
+          </div>
+          <div class="text-center info">
+            <a href="#">+ info ></a>
+          </div>
+        </div>
+        <!-- CAJA 2 -->
+        <div class="card caja">
+          <img loading="lazy" class="card-img-top" src="img/home/prod-2.jpg" alt="Card image cap" />
+          <div class="card-body text-center">
+            <h5><span class="">Aridos</span></h5>
+            <hr class="subrayado2">
+          </div>
+          <div class="text-center info">
+            <a href="#">+ info ></a>
+          </div>
+        </div>
+        <!-- CAJA 3 -->
+        <div class="card caja">
+          <img loading="lazy" class="card-img-top" src="img/home/prod-3.jpg" alt="Card image cap" />
+          <div class="card-body text-center">
+            <h5><span class="">Bolsas</span></h5>
+            <hr class="subrayado2">
+          </div>
+          <div class="text-center info">
+            <a href="#">+ info ></a>
+          </div>
+        </div>
+        <!-- CAJA 4 -->
+        <div class="card caja">
+          <img loading="lazy" class="card-img-top" src="img/home/prod-4.jpg" alt="Card image cap" />
+          <div class="card-body text-center">
+            <h5><span class="">Ladrillos</span></h5>
+            <hr class="subrayado2">
+          </div>
+          <div class="text-center info">
+            <a href="#">+ info ></a>
+          </div>
+        </div>
+      </div>
+
+      <hr class="separar">
+
+      <div class="row" id="somos">
+        <div class="col-md-7 wow animate__fadeInLeft animate__delay-2s">
+          <h5 class="subtitle">Bienvenidos</h5>
+          <h3 class="title">Quienes somos</h3>
+          <p>Experiencia, confianza y una larga trayectoria son algunos de los aspectos que uno debe tener en cuenta a
+            la hora de encarar un proyecto. corralón Bianchi brinda todas aquellas cualidades. <br>
+            estamos ubicados en la calle Marques de Aviles 3265 entre pedro Díaz y Gorriti, Hurlingham.
+
+          </p>
+        </div>
+        <div class="col-md-5 pl-4 wow animate__fadeIn animate__delay-5s animate__slow">
+          <img class="img-fluid img-side top" src="/img/home/right.jpg" alt="imagen empresa derecha" />
+        </div>
+      </div>
+  </section>
+  <section class="parallax" id="plx1">
+    <div class="d-flex h-100 text-white flex-column justify-content-center">
+      <h3 class="text-center align-self-center">NUESTRO LOCAL</h3>
+      <img class="align-self-center img-fluid mini-logo" src="/img/home/logo.png" alt="">
+    </div>
+  </section>
+  <section class="container my-5" id="servicios">
+    <div class="row">
+      <div class="col-sm-12 col-md-5 pr-4 wow animate__fadeIn animate__delay-3s animate__slow">
+        <img class="img-fluid img-side w-100" src="/img/home/left.jpg" alt="imagen empresa derecha" />
+      </div>
+      <div class="col-sm-12 col-md-7 wow animate__fadeInLeft animate__delay-1s">
+        <h5 class="subtitle">Que hacemos?</h5>
+        <h3 class="title">Servicios realizados por nosotros</h3>
+        <div class="row my-4 wow animate__fadeInLeft animate__delay-2s px-4">
+          <div class="col-sm-3 col-4">
+            <div class="service-icons bg-light">
+              <i class="fa fa-cogs fa-3x text-success"></i>
+            </div>
+          </div>
+          <div class="col-sm-8 col-8">
+            <div class="service-text">
+              <h4 class="text-uppercase">Lorem ipsum</h4>
+              <p class="font-weight-light">Lorem ipsum dolor sit, amet consectetur</p>
+            </div>
+          </div>
+        </div>
+        <div class="row my-4 wow animate__fadeInLeft animate__delay-2s px-4">
+          <div class="col-sm-3 col-4">
+            <div class="service-icons bg-light">
+              <i class="fa fa-motorcycle fa-3x text-success"></i>
+            </div>
+          </div>
+          <div class="col-sm-8 col-8">
+            <div class="service-text">
+              <h4 class="text-uppercase">Lorem ipsum</h4>
+              <p class="font-weight-light">Lorem ipsum dolor sit, amet consectetur
+                lorem ipsum dolor sit, amet consectetur</p>
+            </div>
+          </div>
+        </div>
+        <div class="row my-4 wow animate__fadeInLeft animate__delay-3s px-4">
+          <div class="col-sm-3 col-4">
+            <div class="service-icons bg-light">
+              <i class="fa fa-wrench fa-3x text-success"></i>
+            </div>
+          </div>
+          <div class="col-sm-8 col-8">
+            <div class="service-text">
+              <h4 class="text-uppercase">Lorem ipsum</h4>
+              <p class="font-weight-light">Lorem ipsum dolor sit, amet consectetur
+                Lorem ipsum dolor sit</p>
+            </div>
+          </div>
+        </div>
+        <div class="row my-4 wow animate__fadeInLeft animate__delay-4s px-4">
+          <div class="col-sm-3 col-4">
+            <div class="service-icons bg-light">
+              <i class="fa fa-car-crash fa-3x text-success"></i>
+            </div>
+          </div>
+          <div class="col-sm-8 col-8">
+            <div class="service-text">
+              <h4 class="text-uppercase">Lorem ipsum</h4>
+              <p class="font-weight-light">Lorem ipsum dolor sit, amet consectetur</p>
+            </div>
+          </div>
+        </div>
+        <div class="row my-4 wow animate__fadeInLeft animate__delay-5s px-4">
+          <div class="col-sm-3 col-4">
+            <div class="service-icons bg-light">
+              <i class="fa fa-credit-card fa-3x text-success"></i>
+            </div>
+          </div>
+          <div class="col-sm-8 col-8">
+            <div class="service-text">
+              <h4 class="text-uppercase">Lorem ipsum</h4>
+              <p class="font-weight-light">Lorem ipsum dolor sit, amet consectetur</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  {{>partners}}
+  {{>contactform}}
+  {{>footer}}
+  <script src="/js/index.js"></script>
